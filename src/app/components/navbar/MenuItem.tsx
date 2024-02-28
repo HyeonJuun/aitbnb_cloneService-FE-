@@ -1,9 +1,12 @@
 'use client';
-interface MenuItemPrps {
+
+import Modal from '@/app/components/modals/Modal';
+
+interface MenuItemProps {
   onClick: () => void;
   label: string;
 }
-const MenuItem: React.FC<MenuItemPrps> = ({ onClick, label }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ onClick, label }) => {
   return (
     <div
       onClick={onClick}
