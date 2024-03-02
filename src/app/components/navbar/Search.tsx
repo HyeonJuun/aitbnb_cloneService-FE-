@@ -27,7 +27,7 @@ const Search = () => {
             font-semibold
             px-6'
         >
-          anywhere
+          어디든지
         </div>
         <div
           className='
@@ -40,7 +40,7 @@ const Search = () => {
         flex-1
         text-center'
         >
-          Any Week
+          언제든 일주일
         </div>
         <div
           className='
@@ -59,7 +59,7 @@ const Search = () => {
           hidden sm:block
           '
           >
-            Add Guests
+            게스트 추가
           </div>
           <div
             className='
