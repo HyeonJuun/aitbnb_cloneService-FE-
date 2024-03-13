@@ -140,7 +140,7 @@ const Categories = () => {
     return null;
   }
   return (
-    <div>
+
       <Container>
         <div
           className='
