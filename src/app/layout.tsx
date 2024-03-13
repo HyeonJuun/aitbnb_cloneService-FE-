@@ -5,6 +5,7 @@ import Navbar from '@/app/components/navbar/Navbar';
 import ClientOnly from '@/app/components/ClientOnly';
 import RegisterModal from '@/app/components/modals/RegisterModal';
 import LoginModal from '@/app/components/modals/LoginModal';
+import ToasterProvider from '@/app/providers/ToasterProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,11 +20,11 @@ export default function RootLayout(props: { children: React.ReactNode }) {
       <body className='font.className'>
         <ClientOnly>
           <LoginModal />
+          <ToasterProvider />
           <RegisterModal />
           <Navbar />
         </ClientOnly>
-
-        {props.children}
+        <div className='pb-20 pt-28'>{props.children}</div>
       </body>
     </html>
   );

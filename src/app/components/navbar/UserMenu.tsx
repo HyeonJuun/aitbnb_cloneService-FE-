@@ -10,12 +10,7 @@ const UserMenu = () => {
 
   const registerModal  = useRegisterModal()
   const loginModal = useLoginModal();
-  console.log(">>>>>>>>>loginModal", loginModal);
   const [isOpen, setIsOpen] = useState(false);
-
-  // const [isLoginPass, setIsLoginPass] = useState(false); //무조건 트루로반환되는상태
-  // setIsLoginPass(isLoginPass);
-
   const [isLoginPass, setIsLoginPass] = useState(loginModal.isLoginPass)
   useEffect(() => {
     setIsLoginPass(loginModal.isLoginPass);
@@ -23,8 +18,6 @@ const UserMenu = () => {
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
-  
-
 
   return (
     <div className='relative'>
@@ -32,46 +25,43 @@ const UserMenu = () => {
         <div
           onClick={() => {}}
           className='
-        hidden
-        md:block
-        text-sm
-        front-semibold
-        py-3
-        px-4
-        rounded-full
-        hover:bg-neutral-100
-        transition
-        cursor-pointer
-        '
+            hidden
+            md:block
+            text-sm
+            front-semibold
+            py-3
+            px-4
+            rounded-full
+            hover:bg-neutral-100
+            transition
+            cursor-pointer
+          '
         >
-          Airbnb your home
+          당신의 공간을 에어비앤비하세요
         </div>
         <div
           onClick={toggleOpen}
           className='
-        p-4
-        md:py-1
-        md:px-2
-        border-[1px]
-        border-neutral-200
-        flex
-        flex-row
-        items-center
-        gap-3
-        rounded-full
-        hover:shadow-md
-        transition
-        '
+            p-4
+            md:py-1
+            md:px-2
+            border-[1px]
+            border-neutral-200
+            flex
+            flex-row
+            items-center
+            gap-3
+            rounded-full
+            hover:shadow-md
+            transition
+          '
         >
           <AiOutlineMenu />
           <div className='hidden md:block'>
-            {/* if(!isLoginPass){
-              <Avatar />
-            } */}
+
           {!isLoginPass ? <Avatar /> : <AvatarLogin/>}
           </div>
 
-         {/* AvatarLogin */}
         </div>
       </div>
       {isOpen && (
@@ -126,4 +116,5 @@ const UserMenu = () => {
     </div>
   );
 };
+
 export default UserMenu;
