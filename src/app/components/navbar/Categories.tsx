@@ -140,10 +140,9 @@ const Categories = () => {
     return null;
   }
   return (
-
-      <Container>
-        <div
-          className='
+    <Container>
+      <div
+        className='
         pt-4
         flex
         flex-row
@@ -151,19 +150,18 @@ const Categories = () => {
         justify-between
         overflow-x-auto
         '
-        >
-          {categories.map((item) => (
-            <CategoryBox
-              key={item.label}
-              label={item.label}
-              description={item.description}
-              image={item.image}
-              selected={category === item.label}
-            />
-          ))}
-        </div>
-      </Container>
-    </div>
+      >
+        {categories.map((item) => (
+          <CategoryBox
+            key={item.label}
+            label={item.label}
+            description={item.description}
+            image={item.image}
+            selected={category === item.label}
+          />
+        ))}
+      </div>
+    </Container>
   );
 };
 
