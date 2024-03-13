@@ -4,7 +4,7 @@ import './globals.css';
 import Navbar from '@/app/components/navbar/Navbar';
 import ClientOnly from '@/app/components/ClientOnly';
 import RegisterModal from '@/app/components/modals/RegisterModal';
-//import ListingRooms from '@/app/components/listings/LilstingRooms';
+import ToasterProvider from '@/app/providers/ToasterProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,10 +18,11 @@ export default function RootLayout(props: { children: React.ReactNode }) {
     <html lang='en'>
       <body className='font.className'>
         <ClientOnly>
+          <ToasterProvider />
           <RegisterModal />
           <Navbar />
         </ClientOnly>
-        {props.children}
+        <div className='pb-20 pt-28'>{props.children}</div>
       </body>
     </html>
   );

@@ -1,7 +1,5 @@
 'use client';
 
-import Modal from '@/app/components/modals/Modal';
-
 interface MenuItemProps {
   onClick: () => void;
   label: string;

@@ -1,5 +1,4 @@
 'use client';
-import MenuItem from '@/app/components/navbar/MenuItem';
 import { BiSearch } from 'react-icons/bi';
 const Search = () => {
   return (

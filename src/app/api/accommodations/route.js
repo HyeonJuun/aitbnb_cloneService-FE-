@@ -9,7 +9,12 @@ export async function POST(request, response) {
       return true;
     })
     .map((eachAccommodation) => ({
-      title: eachAccommodation.title,
+      id: eachAccommodation.id,
+      image_url: eachAccommodation.image_url,
+      category: eachAccommodation.category,
+      location: eachAccommodation.location,
+      host_name: eachAccommodation.host_name,
+      price_per_night: eachAccommodation.price_per_night,
     }));
   return Response.json({ results });
 }
