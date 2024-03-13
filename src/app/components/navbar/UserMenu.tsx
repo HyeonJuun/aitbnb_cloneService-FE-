@@ -32,7 +32,7 @@ const UserMenu = () => {
             cursor-pointer
           '
         >
-          Airbnb your home
+          당신의 공간을 에어비앤비하세요
         </div>
         <div
           onClick={toggleOpen}
