@@ -4,6 +4,9 @@ import CategoryBox from '@/app/components/CategoryBox';
 import Container from '@/app/components/Container';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
+import LeftButtonIcon from '/public/images/LeftButtonIcon.svg';
+import RightButtonIcon from '/public/images/RightButtonIcon.svg';
+import Image from 'next/image';
 
 export const categories = [
   {
@@ -118,18 +121,17 @@ const Categories = () => {
   const [scrollPosition, SetScrollPosition] = useState(0);
 
   const scroll = (scrollOffset: number) => {
-    console.log(scrollPosition);
     if (scrollRef.current) {
       scrollRef.current.scrollLeft += scrollOffset;
-      console.log(scrollPosition);
-      console.log('* 스크롤 왼쪽 현재 위치 : ' + scrollRef.current.scrollLeft);
-      console.log('* 스크롤 현재 넓이' + scrollRef.current.scrollWidth);
-      if (scrollRef.current.scrollLeft < 100) {
+
+      if (scrollRef.current.scrollLeft + scrollOffset < 200) {
         SetScrollPosition(0);
-      } else if (scrollRef.current.scrollLeft > 541) {
-        SetScrollPosition(2);
-      } else {
+        scrollRef.current.scrollLeft = 0;
+      } else if (scrollRef.current.scrollLeft + scrollOffset > 3900) {
         SetScrollPosition(1);
+        scrollRef.current.scrollLeft = scrollRef.current.scrollWidth - 1000;
+      } else {
+        SetScrollPosition(2);
       }
     }
   };
@@ -138,51 +140,10 @@ const Categories = () => {
     return null;
   }
   return (
-    <div className='relative p-2 justify-center'>
-      <div
-        ref={scrollRef}
-        className={`w-full overflow-x-scroll whitespace-nowrap border border-gray-300 flex
-        {${scrollPosition} === 0 ? 'hidden' : ''}`}
-        style={{ scrollBehavior: 'smooth' }}
-      >
-        <button
-          onClick={() => scroll(-200)}
-          className={`
-            absolute 
-            left-0 
-            top-1/2
-            transform 
-            -translate-y-1/2 
-            bg-blue-500 
-            text-white 
-            px-4 
-            py-2 
-            m-2
-            `}
-        >
-          Scroll Left
-        </button>
-        <button
-          onClick={() => scroll(200)}
-          className={`
-          absolute 
-          right-0
-          top-1/2
-          transform 
-          -translate-y-1/2
-          bg-blue-500 
-          text-white 
-          px-4
-          py-2
-          m-2
-          {${scrollPosition} === 2 ? 'hidden' : ''}
-          `}
-        >
-          Scroll Right
-        </button>
-        <Container>
-          <div
-            className='
+    <div>
+      <Container>
+        <div
+          className='
         pt-4
         flex
         flex-row
@@ -190,19 +151,18 @@ const Categories = () => {
         justify-between
         overflow-x-auto
         '
-          >
-            {categories.map((item) => (
-              <CategoryBox
-                key={item.label}
-                label={item.label}
-                description={item.description}
-                image={item.image}
-                selected={category === item.label}
-              />
-            ))}
-          </div>
-        </Container>
-      </div>
+        >
+          {categories.map((item) => (
+            <CategoryBox
+              key={item.label}
+              label={item.label}
+              description={item.description}
+              image={item.image}
+              selected={category === item.label}
+            />
+          ))}
+        </div>
+      </Container>
     </div>
   );
 };
