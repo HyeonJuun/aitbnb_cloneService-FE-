@@ -42,9 +42,10 @@ const Button: React.FC<ButtonProps> = ({
         <Icon
           size={24}
           className='
-        absolute
-        left-4
-        top-3'
+            absolute
+            left-4
+            top-3
+          '
         />
       )}
       {label}
