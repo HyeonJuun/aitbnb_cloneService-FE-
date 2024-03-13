@@ -1,0 +1,124 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "title": "Cozy Cabin Retreat",
+      "description": "Escape to this cozy cabin nestled in the woods. Perfect for a peaceful getaway surrounded by nature.",
+      "price_per_night": 120,
+      "location": "KR",
+      "image_url": "/images/room1.png",
+      "category": "Forest",
+      "host_name": "John Doe"
+    },
+    {
+      "id": 2,
+      "title": "Luxury Lakeside Villa",
+      "description": "Indulge in luxury at this stunning lakeside villa. Enjoy breathtaking views and modern amenities.",
+      "price_per_night": 300,
+      "location": "KR",
+      "image_url": "/images/room2.png",
+      "category": "Lakefront",
+      "host_name": "Jane Smith"
+    },
+    {
+      "id": 3,
+      "title": "Sunny Beach House",
+      "description": "Relax and unwind at this sunny beach house. Steps away from the pristine shoreline.",
+      "price_per_night": 200,
+      "location": "KR",
+      "image_url": "/images/room3.png",
+      "category": "Beachfront",
+      "host_name": "Michael Johnson"
+    },
+    {
+      "id": 4,
+      "title": "Urban Loft Retreat",
+      "description": "Discover the charm of city living in this stylish urban loft. Close to restaurants and attractions.",
+      "price_per_night": 180,
+      "location": "KR",
+      "image_url": "/images/room4.png",
+      "category": "City Center",
+      "host_name": "Emily Brown"
+    },
+    {
+      "id": 5,
+      "title": "Mountain Chalet Getaway",
+      "description": "Experience the serenity of the mountains in this rustic mountain chalet. Perfect for outdoor enthusiasts.",
+      "price_per_night": 150,
+      "location": "KR",
+      "image_url": "/images/room5.png",
+      "category": "Mountain",
+      "host_name": "David Wilson"
+    },
+    {
+      "id": 6,
+      "title": "Riverside Cottage Escape",
+      "description": "Unplug and unwind at this charming riverside cottage. Enjoy fishing and relaxation by the river.",
+      "price_per_night": 100,
+      "location": "KR",
+      "image_url": "/images/room6.png",
+      "category": "Riverside",
+      "host_name": "Sarah Taylor"
+    },
+    {
+      "id": 7,
+      "title": "Modern Downtown Apartment",
+      "description": "Immerse yourself in city life at this modern downtown apartment. Walkable to shops and nightlife.",
+      "price_per_night": 220,
+      "location": "USA",
+      "image_url": "/images/room7.png",
+      "category": "Downtown",
+      "host_name": "Daniel Johnson"
+    },
+    {
+      "id": 8,
+      "title": "Seaside Bungalow Retreat",
+      "description": "Escape to paradise in this quaint seaside bungalow. Enjoy stunning ocean views and gentle sea breezes.",
+      "price_per_night": 250,
+      "location": "USA",
+      "image_url": "/images/room8.png",
+      "category": "Seaside",
+      "host_name": "Emma Garcia"
+    },
+    {
+      "id": 9,
+      "title": "Country Farmhouse Getaway",
+      "description": "Experience country living at its finest in this charming farmhouse surrounded by rolling hills.",
+      "price_per_night": 130,
+      "location": "USA",
+      "image_url": "/images/room9.png",
+      "category": "Countryside",
+      "host_name": "Olivia Martinez"
+    },
+    {
+      "id": 10,
+      "title": "Historic Townhouse Retreat",
+      "description": "Step back in time at this historic townhouse retreat. Located in the heart of the old city.",
+      "price_per_night": 170,
+      "location": "USA",
+      "image_url": "/images/room10.png",
+      "category": "City",
+      "host_name": "James Anderson"
+    },
+    {
+      "id": 11,
+      "title": "Eco-Friendly Treehouse Hideaway",
+      "description": "Embrace nature in this eco-friendly treehouse hideaway. Perfect for eco-conscious travelers.",
+      "price_per_night": 180,
+      "location": "USA",
+      "image_url": "/images/room11.png",
+      "category": "Forest",
+      "host_name": "Sophia Thompson"
+    },
+    {
+      "id": 12,
+      "title": "Ski Lodge Retreat",
+      "description": "Hit the slopes from this cozy ski lodge retreat. Ideal for winter sports enthusiasts.",
+      "price_per_night": 280,
+      "location": "USA",
+      "image_url": "/images/room12.png",
+      "category": "Mountain",
+      "host_name": "Alexander Johnson"
+    }
+  ]
+}

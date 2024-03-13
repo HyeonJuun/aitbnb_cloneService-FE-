@@ -40,7 +40,7 @@ const Search = () => {
         flex-1
         text-center'
         >
-          언제든 일주일
+          언제든지
         </div>
         <div
           className='
@@ -59,7 +59,7 @@ const Search = () => {
           hidden sm:block
           '
           >
-            게스트 추가
+            여행자 추가
           </div>
           <div
             className='
